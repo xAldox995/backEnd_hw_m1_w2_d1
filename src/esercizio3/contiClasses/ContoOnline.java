@@ -5,8 +5,8 @@ import esercizio3.exception.BancaException;
 public class ContoOnline extends ContoCorrente {
     private double maxPrelievo;
 
-    public ContoOnline(int nMovimenti, double saldo, String titolare, double maxPrelievo) {
-        super(nMovimenti, saldo, titolare);
+    public ContoOnline(double saldo, String titolare, double maxPrelievo) {
+        super(saldo, titolare);
         this.maxPrelievo = maxPrelievo;
     }
 

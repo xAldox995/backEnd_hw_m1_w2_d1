@@ -8,7 +8,7 @@ public class ContoCorrente {
     private final int maxMovimenti = 50;
     protected double saldo;
 
-    public ContoCorrente(int nMovimenti, double saldo, String titolare) {
+    public ContoCorrente(double saldo, String titolare) {
         this.nMovimenti = 0;
         this.saldo = saldo;
         this.titolare = titolare;
