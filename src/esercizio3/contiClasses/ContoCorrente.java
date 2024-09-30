@@ -18,7 +18,7 @@ public class ContoCorrente {
         saldo -= x;
         nMovimenti ++;
         if (saldo <= 0) {
-            throw new BancaException("Il conto è vuoto. Ricaricalo Povero!!");
+            throw new BancaException("Il conto è in rosso.");
         }
     }
 

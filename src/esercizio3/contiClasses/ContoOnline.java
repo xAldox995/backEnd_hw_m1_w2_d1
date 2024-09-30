@@ -13,7 +13,7 @@ public class ContoOnline extends ContoCorrente {
     @Override
     public void preleva(double x) throws BancaException {
         if (x > maxPrelievo) {
-            throw new BancaException("E chi ti credi di essere IL Re dei POVER!!");
+            throw new BancaException("il prelievo non è disponibile");
         }
         super.preleva(x);
     }
