@@ -14,15 +14,23 @@ public class ContoCorrente {
         this.titolare = titolare;
     }
 
-    public void preleva (double x) throws BancaException {
+    public void preleva(double x) throws BancaException {
+        if (nMovimenti >= maxMovimenti) {
+            throw new BancaException("Raggiunto il limite massimo di movimenti permessi.");
+        }
         saldo -= x;
-        nMovimenti ++;
+        nMovimenti++;
         if (saldo <= 0) {
             throw new BancaException("Il conto è in rosso.");
         }
     }
 
-    public double restituisciSaldo () {
+    public double restituisciSaldo() {
         return saldo;
+    }
+
+
+    public int getNMovimenti() {
+        return nMovimenti;
     }
 }
