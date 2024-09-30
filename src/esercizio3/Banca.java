@@ -11,8 +11,8 @@ public class Banca {
         System.out.println("Esercizio 3");
         Scanner in = new Scanner(System.in);
 
-        ContoCorrente conto1 = new ContoCorrente(0, 20000.00,"Mario Bros");
-        ContoOnline conto2 = new ContoOnline(0,53250.00,"Luigi Bros",1500);
+        ContoCorrente conto1 = new ContoCorrente(0, 20000.00, "Mario Bros");
+        ContoOnline conto2 = new ContoOnline(0, 53250.00, "Luigi Bros", 1500);
 
         try {
             while (true) {
@@ -24,14 +24,14 @@ public class Banca {
 
                 System.out.print("Inserisci l'importo da prelevare dal conto online: ");
                 double prelievo2 = Double.parseDouble(in.nextLine());
-                if (prelievo2 == 0) {
-                    conto2.preleva(prelievo2);
-                    System.out.println("Saldo del conto online aggiornato: " + conto2.restituisciSaldo() );
-                }
+                if (prelievo2 == 0) break;
+                conto2.preleva(prelievo2);
+                System.out.println("Saldo del conto online aggiornato: " + conto2.restituisciSaldo());
+
             }
         } catch (BancaException ex) {
             System.out.println("Errore: " + ex.getMessage());
-        }finally {
+        } finally {
             in.close();
         }
     }
