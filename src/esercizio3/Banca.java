@@ -32,7 +32,10 @@ public class Banca {
             }
         } catch (BancaException ex) {
             System.out.println("Errore: " + ex.getMessage());
-        } finally {
+        } catch (NumberFormatException ex) {
+            System.out.println("Devi inserire un numero");
+        }
+        finally {
             in.close();
         }
     }
