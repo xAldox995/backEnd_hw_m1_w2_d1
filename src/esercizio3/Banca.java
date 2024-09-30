@@ -17,9 +17,9 @@ public class Banca {
         try {
             while (true) {
                 System.out.print("Inserisci l'importo da prelevare dal conto corrente: ");
-                double prelievo = Double.parseDouble(in.nextLine());
-                if (prelievo == 0) break;
-                conto1.preleva(prelievo);
+                double prelievo1 = Double.parseDouble(in.nextLine());
+                if (prelievo1 == 0) break;
+                conto1.preleva(prelievo1);
                 System.out.println("Saldo del conto corrente aggiornato: " + conto1.restituisciSaldo());
 
                 System.out.print("Inserisci l'importo da prelevare dal conto online: ");
