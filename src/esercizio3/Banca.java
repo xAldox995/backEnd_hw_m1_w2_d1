@@ -23,9 +23,9 @@ public class Banca {
                 System.out.println("Saldo del conto corrente aggiornato: " + conto1.restituisciSaldo());
 
                 System.out.print("Inserisci l'importo da prelevare dal conto online: ");
-                prelievo = Double.parseDouble(in.nextLine());
-                if (prelievo == 0) {
-                    conto2.preleva(prelievo);
+                double prelievo2 = Double.parseDouble(in.nextLine());
+                if (prelievo2 == 0) {
+                    conto2.preleva(prelievo2);
                     System.out.println("Saldo del conto online aggiornato: " + conto2.restituisciSaldo() );
                 }
             }
